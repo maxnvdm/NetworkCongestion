@@ -1,0 +1,4 @@
+sudo python tcp.py --bw-host 1000 --bw-net 2 --dir . --delay 0
+python plot_ping.py -f ping.txt -o plot.png
+python plot_queu.py -f q.txt -o qplot.png
+
