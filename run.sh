@@ -1,6 +1,6 @@
 #!/bin/bash
 
-time=20
+time=200
 bwnet=2
 
 delay=5
