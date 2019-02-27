@@ -40,3 +40,9 @@ dir=bbr-q$qsize
 python tcp.py --bw-net $bwnet --delay $delay --dir $dir --time $time --maxq $qsize --cong bbr --qman fq
 python plot_queue.py -f $dir/q.txt -o $dir/q.png
 python plot_ping.py -f $dir/ping.txt -o $dir/rtt.png
+
+qsize=100
+dir=mbps-q$qsize
+python tcp.py --bw-host 100--bw-net $bwnet --delay $delay --dir $dir --time $time --maxq $qsize --cong bbr --qman fq
+python plot_queue.py -f $dir/q.txt -o $dir/q.png
+python plot_ping.py -f $dir/ping.txt -o $dir/rtt.png
