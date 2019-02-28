@@ -1,4 +1,11 @@
-sudo python tcp.py --bw-host 1000 --bw-net 2 --dir . --delay 0
-python plot_ping.py -f ping.txt -o plot.png
-python plot_queu.py -f q.txt -o qplot.png
+The Mininet virtual machine used to run this program is found at the following link (as provided in the assignment breif):
+https://www.dropbox.com/sh/33ifti1fx2qyax3/AAD2cH2bFxKMQaPppquycU8La?dl=0
+Virtual machine details:
+user<eee4121f>
+password<MODB>
+
+The commands used to perform the experiment have been compiled into a bash file called run.sh. The experiment can be modified by opening file and adjusting the parameters such as time and bandwidth. By default the time used for each test is set to 120, as this provides a good range for visualising results on a graph but this does mean run.sh will take about 20minutes. Decrease the time variable for a shorter run-time.
+
+To run the experiment, open a terminal in the network congestion folder and enter:
+sudo ./run.sh
 
