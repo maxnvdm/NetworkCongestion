@@ -21,6 +21,12 @@ python tcp.py --bw-net $bwnet --delay $delay --dir $dir --time $time --maxq $qsi
 python plot_queue.py -f $dir/q.txt -o $dir/qreno2.png
 python plot_ping.py -f $dir/ping.txt -o $dir/rttreno2.png
 
+
+python tcp.py --bw-host 100 --bw-net $bwnet --delay $delay --dir $dir --time $time --maxq $qsize
+python plot_queue.py -f $dir/q.txt -o $dir/renoq2.png
+python plot_ping.py -f $dir/ping.txt -o $dir/renortt2.png
+
+
 qsize=100
 
 python tcp.py --bw-net $bwnet --delay $delay --dir $dir --time $time --maxq $qsize --cong cubic
@@ -36,6 +42,11 @@ qsize=20
 python tcp.py --bw-net $bwnet --delay $delay --dir $dir --time $time --maxq $qsize --cong cubic
 python plot_queue.py -f $dir/q.txt -o $dir/qcubic2.png
 python plot_ping.py -f $dir/ping.txt -o $dir/rttcubic2.png
+
+
+python tcp.py --bw-host 100 --bw-net $bwnet --delay $delay --dir $dir --time $time --maxq $qsize --cong cubic
+python plot_queue.py -f $dir/q.txt -o $dir/cubicq2.png
+python plot_ping.py -f $dir/ping.txt -o $dir/cubicrtt2.png
 
 qsize=100
 
@@ -53,3 +64,6 @@ python tcp.py --bw-net $bwnet --delay $delay --dir $dir --time $time --maxq $qsi
 python plot_queue.py -f $dir/q.txt -o $dir/qbbr2.png
 python plot_ping.py -f $dir/ping.txt -o $dir/rttbbr2.png
 
+python tcp.py --bw-host 100 --bw-net $bwnet --delay $delay --dir $dir --time $time --maxq $qsize --cong bbr --qman fq
+python plot_queue.py -f $dir/q.txt -o $dir/bbrq2.png
+python plot_ping.py -f $dir/ping.txt -o $dir/bbrrtt2.png
